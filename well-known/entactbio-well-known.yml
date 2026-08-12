@@ -1,0 +1,55 @@
+generated: '2026-08-12'
+method: probed
+source: https://entactbio.com/.well-known/
+host: https://entactbio.com
+note: >-
+  No /.well-known/ document could be read. entactbio.com is fronted by a SiteGround
+  bot-protection edge that answers EVERY path — including /robots.txt and the site
+  root — with HTTP 202, an `sg-captcha: challenge` header, and a ~180-byte HTML shell
+  containing a meta-refresh to /.well-known/sgcaptcha/. The 202 responses below are
+  therefore NOT documents and are recorded as misses, not hits. No WellKnown or
+  SecurityTxt pointer is emitted in apis.yml. There is also no api., docs.,
+  developer., portal. or app. host in DNS for this domain (NXDOMAIN on all), so
+  there is no second host on which to retry the probe.
+documents:
+- path: /.well-known/security.txt
+  status: 202
+  document: false
+  detail: sg-captcha challenge HTML shell (195 bytes)
+- path: /.well-known/openid-configuration
+  status: 202
+  document: false
+  detail: sg-captcha challenge HTML shell (203 bytes)
+- path: /.well-known/oauth-authorization-server
+  status: 202
+  document: false
+  detail: sg-captcha challenge HTML shell (209 bytes)
+- path: /.well-known/api-catalog
+  status: 202
+  document: false
+  detail: sg-captcha challenge HTML shell (194 bytes)
+- path: /.well-known/ai-plugin.json
+  status: 202
+  document: false
+  detail: sg-captcha challenge HTML shell (197 bytes)
+- path: /.well-known/agent-card.json
+  status: 202
+  document: false
+  detail: sg-captcha challenge HTML shell (198 bytes) — not an AgentCard; no a2a/ artifact written
+- path: /.well-known/agent.json
+  status: 202
+  document: false
+  detail: sg-captcha challenge HTML shell (193 bytes) — legacy path, also a challenge shell
+x-evidence:
+  fetched: '2026-08-12'
+  challenge_header: 'sg-captcha: challenge'
+  user_agents_tried:
+  - curl/8
+  - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Chrome/126.0 Safari/537.36
+  dns_subdomain_probe:
+    api.entactbio.com: NXDOMAIN
+    docs.entactbio.com: NXDOMAIN
+    developer.entactbio.com: NXDOMAIN
+    portal.entactbio.com: NXDOMAIN
+    app.entactbio.com: NXDOMAIN
+    careers.entactbio.com: NXDOMAIN

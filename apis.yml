@@ -1,7 +1,18 @@
 aid: entactbio
-name: Entactbio
-description: 'Entactbio is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Entact Bio
+description: 'Entact Bio is a preclinical-stage biotechnology company based in Watertown,
+  Massachusetts, developing a new class of small-molecule precision medicines called
+  Enhancement-Targeting Chimeric (ENTAC) molecules. Where targeted protein degradation
+  removes disease-causing proteins, Entact Bio works in the opposite direction: its
+  ENTAC molecules recruit deubiquitinases (DUBs) to strip ubiquitin chains from beneficial
+  proteins in order to extend their half-life, relocate them, or otherwise restore
+  their function. The company''s proprietary Encompass platform combines biological,
+  chemical, and computational tools to identify disease targets amenable to protein
+  enhancement across oncology, autoimmune disease, and rare genetic disorders. Entact
+  Bio launched in December 2022 with an $81 million Series A co-led by Qiming Venture
+  Partners USA and venBio Partners, with participation from Abingworth, Brandon Capital,
+  and others. It is a therapeutics research organization and publishes no public developer
+  program, API, or machine-readable API artifacts.'
 url: https://raw.githubusercontent.com/api-evangelist/entactbio/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +23,12 @@ created: '2026-08-12'
 modified: '2026-08-12'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Drug Discovery
+- Life Sciences
+- Targeted Protein Degradation
+- Preclinical
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,55 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/entactbio-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://entactbio.com/
+- type: About
+  url: https://entactbio.com/science/
+- type: Team
+  url: https://entactbio.com/team/
+- type: News
+  url: https://entactbio.com/news-publications/
+- type: Careers
+  url: https://entactbio.com/careers/
+- type: Contact
+  url: https://entactbio.com/contact-us/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/entact-bio
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/entact-bio
+- type: LLMsTxt
+  url: llms/entactbio-llms.txt
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: >-
+    entactbio.com is fronted by a SiteGround bot-protection edge that answers every
+    path — including the site root and /robots.txt — with HTTP 202, an
+    `sg-captcha: challenge` header and a 180-byte meta-refresh shell pointing at
+    /.well-known/sgcaptcha/, so not one page, spec path or /.well-known/ document
+    could be read from the provider's own host under any user agent; DNS separately
+    shows no api./docs./developer./portal. host to retry against, and the company is
+    a preclinical therapeutics business with no evident developer program.
+  evidence:
+  - url: https://entactbio.com/
+    status: 202
+  - url: https://entactbio.com/robots.txt
+    status: 202
+  - url: https://entactbio.com/llms.txt
+    status: 202
+  - url: https://entactbio.com/openapi.json
+    status: 202
+  - url: https://entactbio.com/.well-known/agent-card.json
+    status: 202
+  - url: https://entactbio.com/.well-known/security.txt
+    status: 202
+  - url: https://api.github.com/orgs/EntactBio
+    status: 200
+  checked: '2026-08-12'

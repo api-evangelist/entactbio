@@ -42,5 +42,7 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Entactbio is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Entact Bio is a preclinical-stage biotechnology company in Watertown, Massachusetts developing Enhancement-Targeting Chimeric (ENTAC) molecules — small molecules that recruit deubiquitinases to restore the function of beneficial proteins, the inverse of targeted protein degradation. It publishes no public API, SDK, or developer program.
+
+- https://entactbio.com/
+- https://www.linkedin.com/company/entact-bio

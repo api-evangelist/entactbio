@@ -1,0 +1,35 @@
+generated: '2026-08-12'
+method: searched
+source: https://api.github.com/orgs/EntactBio
+note: >-
+  No first-party client library exists for Entact Bio in any public registry. The npm
+  registry search for "entactbio" returns 0 objects, PyPI has no `entactbio` project,
+  and the company's GitHub organization — github.com/EntactBio, created 2023-09-26 and
+  verifiably theirs — has `public_repos: 0`. Entact Bio is a preclinical therapeutics
+  company, not a software vendor: its computational work (the Encompass platform) is
+  internal R&D tooling built on AWS with a third-party data platform (Quilt), and there
+  is no API for a client library to talk to. No `SDKs` and no `Packages` pointer is
+  emitted in apis.yml — recording an empty registry search as a package surface would
+  be a false presence.
+packages: []
+package_count: 0
+repositories: []
+organizations:
+- name: EntactBio
+  url: https://github.com/EntactBio
+  created: '2023-09-26'
+  public_repos: 0
+  note: >-
+    Organization is registered but empty. No GitHubOrganization pointer is emitted,
+    because an org with zero public repositories is not a published developer surface.
+x-evidence:
+  fetched: '2026-08-12'
+  urls:
+  - url: https://api.github.com/orgs/EntactBio
+    status: 200
+  - url: https://api.github.com/orgs/EntactBio/repos?per_page=100
+    status: 200
+  - url: https://registry.npmjs.org/-/v1/search?text=entactbio&size=5
+    status: 200
+  - url: https://pypi.org/pypi/entactbio/json
+    status: 404
